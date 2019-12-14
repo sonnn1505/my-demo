@@ -5,10 +5,21 @@
 <meta charset="ISO-8859-1">
 <title>AngularJS</title>
 <script th:src="@{/lib/angular.js}"></script>
+<script th:src="@{/lib/ui-grid.js}"></script>
 <script th:src="@{/main.js}"></script>
 <link th:href="@{/main.css}" rel="stylesheet" />
+<link th:href="@{/lib/ui-grid.css}" rel="stylesheet" />
+<style type="text/css">
+</style>
 </head>
-<body ng-app="BranchManagement" ng-controller="BranchController">
+<body ng-app="BranchApp">
+	<h2>AngularJS UI Grid Example</h2>
+	<div ng-controller="BranchCtrl">
+		<div ui-grid="{ data: branchs }" class="myGrid"></div>
+	</div>
+</body>
+
+<!-- <body ng-app="BranchManagement" ng-controller="BranchController">
 	<table border="1">
 	         <tr>
 	            <th>ID</th>
@@ -22,7 +33,7 @@
 	            <th>Edit</th>
 	            <th>Delete</th>
 	         </tr>
-	         <!-- $scope.branchs -->
+	         $scope.branchs
 	   <tr ng-repeat="branch in branchs">
 	      <td> {{ branch.id }}</td>
 	      <td> {{ branch.maKhuVuc }}</td>
@@ -40,5 +51,5 @@
 	      </td>
 	   </tr>
 	</table>
-</body>
+</body> -->
 </html>

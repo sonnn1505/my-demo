@@ -1,11 +1,9 @@
-var app = angular.module("BranchManagement", []);
+var app = angular.module("BranchApp", ["ui.grid"]);
  
 // Controller Part
-app.controller("BranchController", function($scope, $http) {
- 
- 
+app.controller("BranchCtrl", function($scope, $http) {
     $scope.branchs = [];
-    $scope.branchForm = {
+/*    $scope.branchForm = {
         id: 1,
         maKhuVuc: "",
         tenKhuVuc: "",
@@ -21,7 +19,7 @@ app.controller("BranchController", function($scope, $http) {
         soDienThoai:"",
         soFax:"",
         tinhThanh:"",
-    };
+    };*/
  
     // Now load the data from server
     _refreshBranchData();

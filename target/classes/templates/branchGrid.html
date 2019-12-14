@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<script th:src="@{lib/angular.js}"></script>
+<script th:src="@{lib/ag-grid-enterprise.js}"></script>
+<script th:src="@{/main-grid.js}"></script>
+<script> var __basePath = ''; </script>
+<body>
+	<div ng-app="example" ng-controller="exampleCtrl" style="height: 100%">
+    <div ag-grid="gridOptions" style="height: 100%;" class="ag-theme-balham"></div>
+</div>
+</body>
+</html>

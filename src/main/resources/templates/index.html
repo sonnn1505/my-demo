@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>AngularJS</title>
+<script th:src="@{/lib/angular.js}"></script>
+<script th:src="@{/main.js}"></script>
+<link th:href="@{/main.css}" rel="stylesheet" />
+</head>
+<body ng-app="BranchManagement" ng-controller="BranchController">
+	<table border="1">
+	         <tr>
+	            <th>ID</th>
+	            <th>Mã khu vực</th>
+	            <th>Tên khu vực</th>
+	            <th>Mã chi nhánh</th>
+	            <th>Tên chi nhánh</th>
+	            <th>Mã phòng GD</th>
+	            <th>Tên phòng GD</th>
+	            <th>Địa chỉ</th>
+	            <th>Edit</th>
+	            <th>Delete</th>
+	         </tr>
+	         <!-- $scope.branchs -->
+	   <tr ng-repeat="branch in branchs">
+	      <td> {{ branch.id }}</td>
+	      <td> {{ branch.maKhuVuc }}</td>
+	      <td >{{ branch.tenKhuVuc }}</td>
+	      <td> {{ branch.maChiNhanh }}</td>
+	      <td >{{ branch.tenChiNhanh }}</td>
+	      <td> {{ branch.maPhongGD }}</td>
+	      <td >{{ branch.tenPhongGD }}</td>
+	      <td >{{ branch.diaChi }}</td>
+	      <td>
+	      <a ng-click="editEmployee(employee)" class="edit-button">Edit</a>
+	      </td>
+	      <td>
+	      <a ng-click="deleteEmployee(employee)" class="delete-button">Delete</a>
+	      </td>
+	   </tr>
+	</table>
+</body>
+</html>
